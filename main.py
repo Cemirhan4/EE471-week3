@@ -1,29 +1,37 @@
-from custom_classes import MediaItem
+from custom_classes import MediaItem, Book, DVD
 
-# Create two MediaItem instances
 book = MediaItem("1984", "George Orwell")
 movie = MediaItem("Inception", "Christopher Nolan")
 
-# Display initial status
 print(book)
 print(movie)
-
 print()
 
-# Simulate checking out the book
 print("Checking out the book...")
 print(book.checkout())
 print(book)
-
 print()
 
-# Try to check out the book again
 print("Trying to check out the book again...")
 print(book.checkout())
-
 print()
 
-# Return the book
 print("Returning the book...")
 book.return_item()
 print(book)
+print()
+
+novel = Book("To Kill a Mockingbird", "Harper Lee", page_count=281)
+dvd = DVD("The Matrix", "Wachowski Sisters", duration=136)
+
+print(novel)
+print(dvd)
+print()
+
+print("Checking out the DVD...")
+print(dvd.checkout())
+print(dvd)
+print()
+
+print("Trying to check out the DVD again...")
+print(dvd.checkout())
